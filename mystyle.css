@@ -24,6 +24,9 @@ p.red {
   color:red;
 }
 
+p.small {
+  line-height: 0.7;
+}
 /* center images in "polite"*/
 .center {
   display: block;
