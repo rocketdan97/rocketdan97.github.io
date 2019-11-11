@@ -12,20 +12,32 @@ div.tab {
   margin-left: 40px;
 }
 
+div.sans {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 p.right {
   text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p.center {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p.red {
   color:red;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p.small {
   line-height: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* center images in "polite"*/
 .center {
