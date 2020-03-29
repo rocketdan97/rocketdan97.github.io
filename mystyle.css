@@ -1,3 +1,8 @@
+img {
+  max-width: 50%;
+  height: auto;
+}
+
 /* arbitrary margins*/
 div.margin {
   max-width:850px;
