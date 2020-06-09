@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title> math </title>
-  <link rel="stylesheet" type="text/css" href="../mystyle.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href="../dab.png" type="image/png" rel="shortcut icon"/>
 </head>
 
+<style>
+p.subhead {
+  font-size: 13px;
+  padding-bottom: 1px;
+}</style>
+
 <body>
-<div class="margin"> <div class="sans">
+<div class="container">
 
-  <p class="right">
-    <a href="../index.html"> home</a> | en | <a href="../fr/math.html">fr</a>
-  </p>
+    <nav class="navbar navbar-expand-sm">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item"> <a class="nav-link" href="../index.html">home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../en/writing.html">essays</a> </li>
+        <li class="nav-item"> <a class="nav-link disabled" href="#">math/data</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../en/books.html">book reviews</a> </li>
+      </ul>
+    </nav>
 
-  <h1>math</h1>
+<h4 class="text-center">math/data</h4>
 
+<div  class="d-flex justify-content-center">
   <table border="0">
-    <tr>
-    <td>03.29.20</td>
-    <td><a href="math/gini/gini.html">how tf is the gini coefficient half the relative mean absolute difference? </a></td>
-    </tr>
+    <tr><td><a href="math/gini/gini.html">how is the gini coefficient half the relative mean absolute difference? </a></td></tr>
+    <tr><td><p class="subhead">two seemingly unrelated ways to get the same inequality metric</p></td></tr>
 
-    <tr>
-    <td>06.27.19</td>
-    <td><a href="math/thousand-doors/problem.html">a thousand doors </a></td>
-    </tr>
-
+    <tr><td><a href="math/thousand-doors/problem.html">a thousand doors </a></td></tr>
+    <tr><td><p class="subhead">a fun counting problem</p></td></tr>
   </table>
+</div>
 
-</div> </div>
+</div>
 </body>
 </html>

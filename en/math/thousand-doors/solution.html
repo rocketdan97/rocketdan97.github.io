@@ -3,72 +3,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <title> mille portes </title>
-  <link rel="stylesheet" type="text/css" href="../../../mystyle.css">
-  <link href="../../../dab.png" type="image/png" rel="shortcut icon"/>
+  <title> a thousand doors (solution)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
 </script>
+  <link href="../../../dab.png" type="image/png" rel="shortcut icon"/>
 </head>
 
 <body>
-<div class="margin"> <div class="sans">
+<div class="container">
 
-  <p class="right">
-    <a href="../../../index.html"> home</a> | en | <a href="../../../fr/math/thousand-doors/solution.html">fr</a>
-  </p>
+  <nav class="navbar navbar-expand-sm">
+    <ul class="nav navbar-nav">
+      <li class="nav-item"> <a class="nav-link" href="../../../index.html">home</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="../../writing.html">essays</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="../../math.html">math/data</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="../../books.html">book reviews</a> </li>
+    </ul>
+  </nav>
 
-  <h1>a thousand doors (solution)</h1>
+  <div class="row justify-content-center">
+    <div class="col-sm-9">
 
-  <p>Only thirty-one doors end up open: doors 1, 4, 9, 16, 25, and all the other perfect squares less than a thousand. Why do only these doors end up open?</p>
+      <h4>a thousand doors (solution)</h4>
+      <p>06/27/19</p>
 
-  <p>In a nutshell, for any given door,
-    \begin{align*}
-      \text{door ends up open} &\iff \text{door is flipped an odd number of times}\\ &\iff \text{door number has an odd number of factors}\\ &\iff \text{door number is a perfect square.}
-    \end{align*}
-  </p>
+      <p>Only thirty-one doors end up open: doors 1, 4, 9, 16, 25, and all the other perfect squares less than a thousand. Why do only these doors end up open?</p>
 
-  <p>To see how the number of times a door gets flipped is the same as the number of factors for that door's number, consider which people flip Door #15.</p>
+      <p>In a nutshell, for any given door,
+        \begin{align*}
+          \text{door ends up open} &\iff \text{door is flipped an odd number of times}\\ &\iff \text{door number has an odd number of factors}\\ &\iff \text{door number is a perfect square.}
+        \end{align*}
+      </p>
+
+      <p>To see how the number of times a door gets flipped is the same as the number of factors for that door's number, consider which people flip Door #15.</p>
 
 
-  <img src="fig-5.png" alt="fig-5" class="center" style="max-width:70%;height:auto;">
-  <p class="center"> <b>fig. 5</b> <i>The first, third, fifth, and fifteenth people flip Door #15, leaving it closed</i> </p>
+      <img src="fig-5.png" alt="fig-5" class="rounded mx-auto d-block" style="max-width:60%;height:auto;">
+      <p class="text-center"> <b>fig. 5</b> <i>The first, third, fifth, and fifteenth people flip Door #15, leaving it closed</i> </p>
 
-  <p>Door #15 gets flipped four times by the people corresponding to 15's factors (1, 3, 5, and 15). In general, the number of times a door is flipped is the number of factors for that door's number.</p>
+      <p>Door #15 gets flipped four times by the people corresponding to 15's factors (1, 3, 5, and 15). In general, the number of times a door is flipped is the number of factors for that door's number.</p>
 
-  <p>Now consider Door #16.</p>
+      <p>Now consider Door #16.</p>
 
-  <img src="fig-6.png" alt="fig-6" class="center" style="max-width:70%;height:auto;">
-  <p class="center"> <b>fig. 6</b> <i>The first, second, fourth, eighth, and sixteenth people flip Door #16, leaving it open</i> </p>
+      <img src="fig-6.png" alt="fig-6" class="rounded mx-auto d-block" style="max-width:60%;height:auto;">
+      <p class="text-center"> <b>fig. 6</b> <i>The first, second, fourth, eighth, and sixteenth people flip Door #16, leaving it open</i> </p>
 
-  <p>16 has five factors (1, 2, 4, 8, and 16). Most numbers have an even number of factors, but perfect squares like 16 are an exception since one of their factors is a square root.</p>
+      <p>16 has five factors (1, 2, 4, 8, and 16). Most numbers have an even number of factors, but perfect squares like 16 are an exception since one of their factors is a square root.</p>
 
-  </p>So whether a door ends up open or closed comes down to whether it's flipped an even or odd number of times, which comes down to whether the door's number has an even or odd number of factors. Perfect squares are the only numbers with an odd number of factors (since their square roots lack accompanying factors). That's why only the thirty-one doors corresponding to perfect squares end up open in this problem.</p>
+      </p>So whether a door ends up open or closed comes down to whether it's flipped an even or odd number of times, which comes down to whether the door's number has an even or odd number of factors. Perfect squares are the only numbers with an odd number of factors (since their square roots lack accompanying factors). That's why only the thirty-one doors corresponding to perfect squares end up open in this problem.</p>
 
-  <p>Here's all that more formally:</p>
 
-  <div class="tab">
-    <p><b>Proposition 1.</b> The \(n^{th}\) person in line flips door \(m\) if and only if \(n\) is a factor of \(m.\)</p>
+      <p>Here's all that more formally:</p>
 
-    <p>Proof:
-    Let \(n\in\mathbb{N}\) be a factor of \(m\in\mathbb{N}.\) Then \(nk=m\) for some \(k\in\mathbb{N}.\) Since person \(n\) flips every \(n^{th}\) door, the \(k^{th}\) door person \(n\) flips is door \(m\). For the converse, suppose \(n\) is not a factor of \(m\) and person \(n\) flips door \(m\). Since person \(n\) only flips every \(n^{th}\) door, there exists some \(k\) such that \(nk=m.\) This contradicts \(n\) not being a factor of \(m\).</p>
+      <div style="margin-left:40px">
+        <p><b>Proposition 1.</b> The \(n^{th}\) person in line flips door \(m\) if and only if \(n\) is a factor of \(m.\)</p>
 
-    <p><b>Proposition 2.</b> If a closed door is flipped an even number of times then it ends up closed. Also, if a closed door is flipped an odd number of times then it ends up open.</p>
+        <p>Proof:
+        Let \(n\in\mathbb{N}\) be a factor of \(m\in\mathbb{N}.\) Then \(nk=m\) for some \(k\in\mathbb{N}.\) Since person \(n\) flips every \(n^{th}\) door, the \(k^{th}\) door person \(n\) flips is door \(m\). For the converse, suppose \(n\) is not a factor of \(m\) and person \(n\) flips door \(m\). Since person \(n\) only flips every \(n^{th}\) door, there exists some \(k\) such that \(nk=m.\) This contradicts \(n\) not being a factor of \(m\).</p>
 
-    <p>Proof: First we show if a closed door is flipped an even number of times, it ends up closed. Consider a closed door. Suppose for induction flipping the door \(2k\) times leaves the door closed for some integer \(k.\) Then flipping it \(2(k+1)=2k+2\) times leaves the door closed since the door is closed after being flipped \(2k\) times and then flipped open and then flipped closed. With \(k=0\) as the trivial base case, the first part of our claim is shown by the principal of mathematical induction.</p>
+        <p><b>Proposition 2.</b> If a closed door is flipped an even number of times then it ends up closed. Also, if a closed door is flipped an odd number of times then it ends up open.</p>
 
-    <p>Now we show if a closed door is flipped an odd number of times, it ends up open. Suppose a closed door is flipped \(2m+1\) times for some integer \(m.\) By the first part of this proof, the door is closed after the first \(2m\) flips. Then flipping the door once leaves it open.</p>
+        <p>Proof: First we show if a closed door is flipped an even number of times, it ends up closed. Consider a closed door. Suppose for induction flipping the door \(2k\) times leaves the door closed for some integer \(k.\) Then flipping it \(2(k+1)=2k+2\) times leaves the door closed since the door is closed after being flipped \(2k\) times and then flipped open and then flipped closed. With \(k=0\) as the trivial base case, the first part of our claim is shown by the principal of mathematical induction.</p>
 
-    <p><b>Proposition 3.</b> If a number has an odd number of unique factors, it's a perfect square.</p>
+        <p>Now we show if a closed door is flipped an odd number of times, it ends up open. Suppose a closed door is flipped \(2m+1\) times for some integer \(m.\) By the first part of this proof, the door is closed after the first \(2m\) flips. Then flipping the door once leaves it open.</p>
 
-    <p>Proof: We show the contrapositive. Let \(n\) be a positive integer that is not a perfect square and let \(S=s_1, s_2, \ldots, s_k\) be the set of \(n\)'s unique factors. Suppose for contradiction \(k\) is odd. Then there exists no partition of \(S\) into two subsets of the same cardinality. So \(n\) must have an integer square root, contradicting its construction as not a perfect square.</p>
+        <p><b>Proposition 3.</b> If a number has an odd number of unique factors, it's a perfect square.</p>
 
-    <p>By proposition 1, the the number of times a door \(m\) is flipped is the same as the number of unique factors \(m\) has. Then by proposition 2, door \(m\) ends up open if and only \(m\) has an odd number of unique factors. Finally by proposition 3, door \(m\) ends up open if and only if \(m\) is a perfect square.</p>
+        <p>Proof: We show the contrapositive. Let \(n\) be a positive integer that is not a perfect square and let \(S=s_1, s_2, \ldots, s_k\) be the set of \(n\)'s unique factors. Suppose for contradiction \(k\) is odd. Then there exists no partition of \(S\) into two subsets of the same cardinality. So \(n\) must have an integer square root, contradicting its construction as not a perfect square.</p>
 
-    <p class="right">\(\square\)</p>
+        <p>By proposition 1, the the number of times a door \(m\) is flipped is the same as the number of unique factors \(m\) has. Then by proposition 2, door \(m\) ends up open if and only \(m\) has an odd number of unique factors. Finally by proposition 3, door \(m\) ends up open if and only if \(m\) is a perfect square.</p>
+
+        <p class="text-right">\(\square\)</p>
+      </div>
+
+      <p>Many thanks to my friend Maria for posing this problem on a road trip and to my colleague Drew for finding the solution before me.</p>
+
+    </div>
   </div>
-  <p>(Many thanks to my friend Maria for posing this problem on a road trip and to my colleague Drew for finding the solution before me.)</p>
-  <p class="right">06/27/19</p>
-</div> </div>
+</div>
 </body>
 </html>
